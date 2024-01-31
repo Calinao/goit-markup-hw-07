@@ -78,6 +78,11 @@
     .header-styles {
         box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
     }
+
+    .header-container {
+        display: block !important;
+    }
+
     .nav-logo {
         font-family: 'Raleway', sans-serif;
         font-size: 18px;
@@ -87,11 +92,20 @@
         text-transform: uppercase;
         color: var(--logo);
         text-decoration: none;
-        display: inline-block;
+        padding-left: 0 !important;
+    }
+    .nav-container {
+        display: flex;
+        justify-content: space-between;
+        padding: 2vh .5vw;
     }
 
     .nav-container > .nav-logo {
-        margin-right: 58vw;
+        margin-right: auto;
+    }
+
+    .hamburger-button {
+        display: block;
     }
 
     .nav-list {
@@ -114,10 +128,6 @@
         padding-left: 0;
     }
 
-    .hamburger-button {
-        display: inline-block;
-    }
-
     .nav-menu {
         display: none;
         flex-direction: column;
@@ -129,11 +139,6 @@
 
     .nav-menu.show {
         display: block;
-    }
-
-    .nav-container {
-        display: block;
-        padding: 2vh .5vw;
     }
 
     .address-list {
@@ -200,16 +205,16 @@
     }
 
     .none-sm {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            margin: -1px;
-            border: 0;
-            padding: 0;
-            white-space: nowrap;
-            clip-path: inset(100%);
-            clip: rect(0 0 0 0);
-            overflow: hidden;
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        border: 0;
+        padding: 0;
+        white-space: nowrap;
+        clip-path: inset(100%);
+        clip: rect(0 0 0 0);
+        overflow: hidden;
     }
 
     .section-two-list > .list-item > .heading-list {
@@ -357,12 +362,16 @@
 @media screen and (min-width: 768px) and (max-width: 1158px) {
     .nav-menu {
         justify-content: space-between !important;
-        width: 100% !important;
+        width: 75% !important;
+    }
+
+    .header-container {
+        display: flex;
+        justify-content: space-between;
     }
 
     .nav-container > .nav-logo {
         padding-left: 0 !important;
-        padding-right: 15%;
     }
     .nav-link-one {
         display: flex;
@@ -556,7 +565,7 @@ img {
     text-transform: uppercase;
     color: var(--logo);
     text-decoration: none;
-    padding-left: 10% !important;
+    padding-left: 10%;
 }
 
 .logo {
@@ -576,6 +585,11 @@ link {
 .list {
     list-style: none;
     
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
 }
 
 .nav-list {
